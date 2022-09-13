@@ -38,6 +38,17 @@ python app.py
 
 ```
 
+### Running the app on Cloud Run
+
+Install the gcloud CLI tool.
+
+Run the following
+
+```
+gcloud run deploy --source .
+```
+
+
 ## About the app
 
 This Dash app displays oil production in western New York. There are filters at the top of the app to update the graphs below. By selecting or hovering over data in one plot will update the other plots ('cross-filtering').
