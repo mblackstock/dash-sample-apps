@@ -20,3 +20,10 @@ Contributors:
 - Nguyen Huy Phuc
 - Lorenzo Pigozzi
 
+# Running in GCP Cloud Run
+
+To deploy to Cloud Run
+
+```
+gcloud run deploy --source .
+```

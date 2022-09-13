@@ -1,14 +1,11 @@
 import dash
-import dash_core_components as dcc
-import dash_html_components as html
+from dash import dcc
+from dash import html
 import plotly.graph_objects as go
 import plotly.express as px
 import pandas as pd
 import numpy as np
-import dash_table
-from dash_table import DataTable
-import dash_core_components as dcc
-import dash_html_components as html
+from dash import dash_table
 from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
 
@@ -245,7 +242,7 @@ navbar = dbc.Navbar(
 
 controls_player_1 = dbc.Card(
     [
-        dbc.FormGroup(
+        html.Div(
             [
                 html.Label("Choose an old-school Player:"),
                 html.Br(),
@@ -259,7 +256,7 @@ controls_player_1 = dbc.Card(
 
 controls_player_2 = dbc.Card(
     [
-        dbc.FormGroup(
+        html.Div(
             [
                 html.Label("Choose a new generation Player:"),
                 html.Br(),
@@ -273,13 +270,13 @@ controls_player_2 = dbc.Card(
 
 controls = dbc.Card(
     [
-        dbc.FormGroup(
+        html.Div(
             [html.Label("Choose an Attribute:"), html.Br(), metric1_dropdown,]
         ),
-        dbc.FormGroup(
+        html.Div(
             [html.Label("Choose an Attribute:"), html.Br(), metric2_dropdown,]
         ),
-        dbc.FormGroup(
+        html.Div(
             [html.Label("Choose an Attribute:"), html.Br(), metric3_dropdown]
         ),
     ],
@@ -289,17 +286,17 @@ controls = dbc.Card(
 
 controls_club = dbc.Card(
     [
-        dbc.FormGroup(
+        html.Div(
             [html.Label("Choose a League:"), html.Br(), metric_club_dropdown1,]
         ),
-        dbc.FormGroup(
+        html.Div(
             [
                 html.Label("Choose an attribute for x:"),
                 html.Br(),
                 metric_scatter_dropdown1,
             ]
         ),
-        dbc.FormGroup(
+        html.Div(
             [
                 html.Label("Choose an attribute for y:"),
                 html.Br(),
@@ -311,7 +308,7 @@ controls_club = dbc.Card(
     className="controls",
 )
 
-cards_1 = dbc.CardDeck(
+cards_1 = html.Div(
     [
         dbc.Card(
             dbc.CardBody(
@@ -351,7 +348,7 @@ cards_1 = dbc.CardDeck(
         ),
     ]
 )
-cards_2 = dbc.CardDeck(
+cards_2 = html.Div(
     [
         dbc.Card(
             dbc.CardBody(
@@ -391,7 +388,7 @@ cards_2 = dbc.CardDeck(
         ),
     ]
 )
-cards_3 = dbc.CardDeck(
+cards_3 = html.Div(
     [
         dbc.Card(
             dbc.CardBody(
@@ -413,7 +410,7 @@ cards_3 = dbc.CardDeck(
         ),
     ]
 )
-cards_4 = dbc.CardDeck(
+cards_4 = html.Div(
     [
         dbc.Card(
             dbc.CardBody(
