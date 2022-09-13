@@ -53,6 +53,16 @@ Open http://0.0.0.0:8050/ in your browser, you will see a live-updating dashboar
 
 Click on **Learn more** button to learn more about how this app works.
 
+Run the app on Cloud Run.
+
+Install gcloud CLI.
+
+```
+gcloud run deploy --source .
+```
+
+Answer the questions on where to deploy, etc. and then hit the URL returned.
+
 ## What does this app show
 
 Click on buttons in `Parameter` column to visualize details of trendline on the bottom panel.
