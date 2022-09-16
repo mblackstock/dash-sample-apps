@@ -42,10 +42,10 @@ python app.py
 
 Install the gcloud CLI tool.
 
-Run the following
+Run the following.  Note that this app will not run in the default 512Mi, so bumped it to 1Gb
 
 ```
-gcloud run deploy --source .
+gcloud run deploy --memory=1Gi --source .
 ```
 
 
